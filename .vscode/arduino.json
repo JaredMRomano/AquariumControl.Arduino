@@ -1,0 +1,4 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "Test\\Sample.AnalogReadWrite\\Sample.AnalogReadWrite.ino"
+}
