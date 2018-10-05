@@ -1,4 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "sketch": "Test\\Sample.AnalogReadWrite\\Sample.AnalogReadWrite.ino"
+    "sketch": "Test\\Sample.AtlasEC_i2c\\Sample.AtlasEC_i2c.ino",
+    "port": "COM3"
 }
