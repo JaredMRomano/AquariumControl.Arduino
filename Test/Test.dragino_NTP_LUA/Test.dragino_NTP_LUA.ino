@@ -39,7 +39,7 @@ void loop() {
   // Sync config settings
   if(currentSec - confPrevSec > confInterval) {
        confPrevSec = currentSec;
-  getConfig();
+  //getConfig();
   digitalClockDisplay();
   Console.println(": Config settings synced");
   }
@@ -94,7 +94,7 @@ void setCPUTime(){
     months = (timeString.substring(colon4 + 1, colon5)).toInt();
     years = (timeString.substring(colon5 + 1)).toInt();
 
-    setTime(hours, minutes, seconds, days, months, years);  //set the system time to 23h31m30s on 13Feb2009
+    //setTime(hours, minutes, seconds, days, months, years);  //set the system time to 23h31m30s on 13Feb2009
   }
 }
 
