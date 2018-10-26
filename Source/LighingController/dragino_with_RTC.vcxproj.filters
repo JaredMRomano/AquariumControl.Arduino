@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dragino_with_RTC.ino" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="__vm\.dragino_with_RTC.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TimeService_Yun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="__vm\.LighingController.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RunTimeGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,5 +32,11 @@
     <ClCompile Include="TimeService_Yun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RunTimeGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LightController.ino" />
   </ItemGroup>
 </Project>
