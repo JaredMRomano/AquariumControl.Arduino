@@ -1,5 +1,6 @@
 // TimeService_Yun.h
 
+#include <Time.h>
 #ifndef _TIMESERVICE_Yun_h
 #define _TIMESERVICE_Yun_h
 
@@ -14,7 +15,7 @@ class TimeService_Yun
  public:
 	void init();
 	static void syncTime();
-	static void displayTime();
+	static void displayTime(time_t t);
 
 private:
 	static void printDigits(int digits);

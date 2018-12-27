@@ -22,3 +22,50 @@ c:\program files (x86)\arduino\hardware\arduino\avr\cores\arduino\hardwareserial
 c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(83): error C2065: '__asm__': undeclared identifier
 c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(105): error C2065: '__asm__': undeclared identifier
 c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay.h(112): fatal error C1021: invalid preprocessor command 'warning'
+  RunTimeGroup.cpp
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\runtimegroup.cpp : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(15): warning C4005: '__AVR_ATmega328p__': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\runtimegroup.cpp: note: see previous definition of '__AVR_ATmega328p__'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(16): warning C4005: '__AVR_ATmega328P__': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\runtimegroup.cpp: note: see previous definition of '__AVR_ATmega328P__'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(20): warning C4005: 'ARDUINO_AVR_YUN': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\runtimegroup.cpp: note: see previous definition of 'ARDUINO_AVR_YUN'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(21): warning C4005: 'ARDUINO_ARCH_AVR': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\runtimegroup.cpp: note: see previous definition of 'ARDUINO_ARCH_AVR'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(22): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(30): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\stdlib.h(73): error C2371: 'div_t': redefinition; different basic types
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(54): note: see declaration of 'div_t'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\stdlib.h(79): error C2371: 'ldiv_t': redefinition; different basic types
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(55): note: see declaration of 'ldiv_t'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(1783): error C2446: ':': no conversion from 'size_t' to 'const char *'
+  c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(1783): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+c:\program files (x86)\arduino\hardware\arduino\avr\cores\arduino\hardwareserial.h(132): error C2535: 'size_t HardwareSerial::write(uint8_t)': member function already defined or declared
+  c:\program files (x86)\arduino\hardware\arduino\avr\cores\arduino\hardwareserial.h(129): note: see declaration of 'HardwareSerial::write'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(83): error C2065: '__asm__': undeclared identifier
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(105): error C2065: '__asm__': undeclared identifier
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay.h(112): fatal error C1021: invalid preprocessor command 'warning'
+  TimeService_Yun.cpp
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\timeservice_yun.cpp : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(15): warning C4005: '__AVR_ATmega328p__': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\timeservice_yun.cpp: note: see previous definition of '__AVR_ATmega328p__'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(16): warning C4005: '__AVR_ATmega328P__': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\timeservice_yun.cpp: note: see previous definition of '__AVR_ATmega328P__'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(20): warning C4005: 'ARDUINO_AVR_YUN': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\timeservice_yun.cpp: note: see previous definition of 'ARDUINO_AVR_YUN'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(21): warning C4005: 'ARDUINO_ARCH_AVR': macro redefinition
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\timeservice_yun.cpp: note: see previous definition of 'ARDUINO_ARCH_AVR'
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(22): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(30): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\stdlib.h(73): error C2371: 'div_t': redefinition; different basic types
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(54): note: see declaration of 'div_t'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\stdlib.h(79): error C2371: 'ldiv_t': redefinition; different basic types
+  d:\jared\google drive\arduino\aquariumcontroller\source\lightcontroller\__vm\.lightcontroller.vsarduino.h(55): note: see declaration of 'ldiv_t'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(1783): error C2446: ':': no conversion from 'size_t' to 'const char *'
+  c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(1783): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+c:\program files (x86)\arduino\hardware\arduino\avr\cores\arduino\hardwareserial.h(132): error C2535: 'size_t HardwareSerial::write(uint8_t)': member function already defined or declared
+  c:\program files (x86)\arduino\hardware\arduino\avr\cores\arduino\hardwareserial.h(129): note: see declaration of 'HardwareSerial::write'
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(83): error C2065: '__asm__': undeclared identifier
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay_basic.h(105): error C2065: '__asm__': undeclared identifier
+c:\program files (x86)\arduino\hardware\tools\avr\avr\include\util\delay.h(112): fatal error C1021: invalid preprocessor command 'warning'
+  Generating Code...

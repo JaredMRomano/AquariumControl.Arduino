@@ -14,20 +14,25 @@
 
 class LightDimming {
 public:
-	void UpdateLight();
-	void init(int pin, int interval);
-	void SetSunriseTime(unsigned int hr, unsigned int min, unsigned int duration);
-	void SetSunsetTime(unsigned int hr, unsigned int min, unsigned int duration);
-	int _pin;
-	int _interval;
-
-private: 
-	struct sequence{
+	struct sequence {
 		time_t startTime;
 		time_t endTime;
-		unsigned int duration;
-		unsigned int currentOutput;
+		double duration;
 	};
+	void UpdateLight();
+	void init(int pin, int interval);
+	void SetSunriseTime(unsigned int hr, unsigned int min, double durationHr);
+	void SetSunsetTime(unsigned int hr, unsigned int min, double durationHr);
+	int _pin;
+	int _interval;
+	sequence Sunrise() const { return _sunrise; }
+	sequence Sunset() const { return _sunset; }
+	unsigned int CurrentOutput() const {return _currentOutput; }
+
+
+private: 
+
+	unsigned int _currentOutput;
 	sequence _sunrise;
 	sequence _sunset;
 	Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();

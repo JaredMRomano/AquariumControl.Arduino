@@ -67,17 +67,17 @@ void TimeService_Yun::syncTime() {
 	}
 }
 
-void TimeService_Yun::displayTime() {
+void TimeService_Yun::displayTime(time_t t) {
 	// digital clock display of the time
-	Console.print(hour());
-	printDigits(minute());
-	printDigits(second());
+	Console.print(hour(t));
+	printDigits(minute(t));
+	printDigits(second(t));
 	Console.print(' ');
-	Console.print(day());
+	Console.print(day(t));
 	Console.print(' ');
-	Console.print(month());
+	Console.print(month(t));
 	Console.print(' ');
-	Console.print(year());
+	Console.print(year(t));
 	Console.println();	
 }
 
