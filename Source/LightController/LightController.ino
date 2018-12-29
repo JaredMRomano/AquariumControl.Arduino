@@ -26,36 +26,36 @@ void setup()
   tenSecRG.init(10, tenSec);
 
   // Initialize lights
-  blue1.init(0, 10);
-  blue2.init(1, 10);
-  blue3.init(2, 10);
-  white1.init(6, 10);
-  white2.init(7, 10);
+  blue1.init(0, 10, 100);
+  blue2.init(1, 10, 100);
+  blue3.init(2, 10, 100);
+  white1.init(6, 10, 95);
+  white2.init(7, 10, 90);
 
   // Set Start Times
-  //blue1.SetSunriseTime(7, 00, 4);
-  //blue2.SetSunriseTime(7, 30, 4);
-  //blue3.SetSunriseTime(8, 00, 4);
-  //white1.SetSunriseTime(7, 00, 4);
-  //white2.SetSunriseTime(7, 30, 4);
+  blue1.SetSunriseTime(7, 00, 4);
+  blue2.SetSunriseTime(7, 30, 4);
+  blue3.SetSunriseTime(8, 00, 4);
+  white1.SetSunriseTime(8, 00, 4);
+  white2.SetSunriseTime(8, 30, 4);
 
-  //blue1.SetSunsetTime(19, 00, 4);
-  //blue2.SetSunsetTime(19, 30, 4);
-  //blue3.SetSunsetTime(20, 00, 4);
-  //white1.SetSunsetTime(19, 00, 4);
-  //white2.SetSunsetTime(19, 30, 4);
+  blue1.SetSunsetTime(20, 00, 4);
+  blue2.SetSunsetTime(20, 30, 4);
+  blue3.SetSunsetTime(21, 00, 4);
+  white1.SetSunsetTime(20, 00, 4);
+  white2.SetSunsetTime(20, 30, 4);
 
-  blue1.SetSunriseTime(20, 40, .5);
-  blue2.SetSunriseTime(20, 50, .5);
-  blue3.SetSunriseTime(21, 00, .5);
-  white1.SetSunriseTime(20, 40, .5);
-  white2.SetSunriseTime(20, 50, .5);
+  //blue1.SetSunriseTime(7, 13, .1);
+  //blue2.SetSunriseTime(7, 24, .1);
+  //blue3.SetSunriseTime(7, 38, .1);
+  //white1.SetSunriseTime(7, 43, .1);
+  //white2.SetSunriseTime(19, 14, 1);
 
-  blue1.SetSunsetTime(22, 00, .5);
-  blue2.SetSunsetTime(22, 10, .5);
-  blue3.SetSunsetTime(22, 20, .5);
-  white1.SetSunsetTime(22, 00, .5);
-  white2.SetSunsetTime(22, 10, .5);
+  //blue1.SetSunsetTime(24, 00, .1);
+  //blue2.SetSunsetTime(24, 30, .1);
+  //blue3.SetSunsetTime(24, 00, .1);
+  //white1.SetSunsetTime(24, 00, .1);
+  //white2.SetSunsetTime(24, 30, .1);
 }
 
 void loop() 

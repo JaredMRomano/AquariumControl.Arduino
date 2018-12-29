@@ -20,7 +20,7 @@ public:
 		double duration;
 	};
 	void UpdateLight();
-	void init(int pin, int interval);
+	void init(int pin, int interval, int maxPercent);
 	void SetSunriseTime(unsigned int hr, unsigned int min, double durationHr);
 	void SetSunsetTime(unsigned int hr, unsigned int min, double durationHr);
 	int _pin;
@@ -31,7 +31,7 @@ public:
 
 
 private: 
-
+	int _maxVal;
 	unsigned int _currentOutput;
 	sequence _sunrise;
 	sequence _sunset;

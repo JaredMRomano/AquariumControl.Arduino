@@ -6,11 +6,13 @@
 #include "TimeService_Yun.h"
 #include <Console.h>
 
-void LightDimming::init(int pin, int interval)
+void LightDimming::init(int pin, int interval, int maxPercent)
 {
 	_pin = pin;
 	_interval = interval;
 	_currentOutput = 0;
+	_maxVal = (int)((long)((long)maxPercent * 4095) / 100);
+
 	// Start the PWM board
 	pwm.begin();
 	pwm.setPWMFreq(1600);  // This is the maximum PWM frequency
@@ -43,11 +45,11 @@ void LightDimming::UpdateLight()
 {
 	time_t t = now();
 
-	// update sunrise time
+	// Update sunrise time
 	tmElements_t myElements = { 0, minute(_sunrise.startTime), hour(_sunrise.startTime), weekday(t), day(t), month(t), year(t) - 1970 };
 	_sunrise.startTime= makeTime(myElements);
 
-	//Update sunrise end time
+	// Update sunrise end time
 	myElements = { 0, minute(_sunrise.endTime), hour(_sunrise.endTime) , weekday(t), day(t), month(t), year(t) - 1970 };
 	_sunrise.endTime = makeTime(myElements);
 
@@ -58,27 +60,42 @@ void LightDimming::UpdateLight()
 	myElements = { 0, minute(_sunset.startTime), hour(_sunset.startTime), weekday(t), day(t), month(t), year(t) - 1970 };
 	_sunset.startTime= makeTime(myElements);
 
+	if (_sunrise.startTime <= t && t <= _sunrise.endTime) // Sunrise interval
+	{
+		long sunriseDurationInt = (long)(_sunrise.duration * 60 * 60);
+		long max_Interval = _maxVal * (long)_interval;
+		int riseDelta = (int)(max_Interval / sunriseDurationInt);
 
-	if (_sunrise.startTime <= t && t <= _sunrise.endTime) {
-		pwm.setPWM(_pin, 0, _currentOutput);
-
-		if (_currentOutput + ((4096 * 10) / (int)(_sunrise.duration * 60 * 60)) >= 4096) {
-			_currentOutput = 4096;
-		}
-		else {
-			_currentOutput = _currentOutput + ((4096 * 10) / (int)(_sunrise.duration * 60 * 60));
-		}
+		_currentOutput = ((t - _sunrise.startTime) / _interval) * riseDelta;
+		//_currentOutput = _currentOutput + riseDelta;
 	}
-	else if (_sunset.startTime <= t && t <= _sunset.endTime) {
-		pwm.setPWM(_pin, 0, _currentOutput);
-
-		if (_currentOutput - ((4096 * 10) / (int)(_sunset.duration * 60 * 60)) <= 0) {
-			_currentOutput = 0;
-		}
-		else {
-			_currentOutput = _currentOutput - ((4096 * 10) / (int)(_sunset.duration * 60 * 60));
-		}
+	else if (_sunrise.endTime <= t && t <= _sunset.startTime) // Full Sun interval
+	{
+		_currentOutput = _maxVal;
 	}
+
+	else if (_sunset.startTime <= t && t <= _sunset.endTime) // Sunset interval
+	{
+		long sunsetDurationInt = (long)(_sunset.duration * 60 * 60);
+		long max_Interval = _maxVal * (long)_interval;
+		int setDelta = (int)(max_Interval / sunsetDurationInt);
+
+		_currentOutput = _maxVal - (((t - _sunset.startTime) / _interval) * setDelta);
+		//_currentOutput = _currentOutput - setDelta;
+	}
+	else
+	{
+		_currentOutput = 0;
+	}
+
+	if (_currentOutput > _maxVal) {
+		_currentOutput = _maxVal;
+	}
+	if (_currentOutput < 0) {
+		_currentOutput = 0;
+	}
+
+	pwm.setPWM(_pin, 0, _currentOutput);
 }
 
 
