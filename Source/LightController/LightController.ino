@@ -26,24 +26,24 @@ void setup()
   tenSecRG.init(10, tenSec);
 
   // Initialize lights
-  blue1.init(0, 10, 100);
-  blue2.init(1, 10, 100);
-  blue3.init(2, 10, 100);
-  white1.init(6, 10, 95);
-  white2.init(7, 10, 90);
+  blue1.init(0, 10, 80);
+  blue2.init(1, 10, 80);
+  blue3.init(3, 10, 75);
+  white1.init(6, 10,70);
+  white2.init(7, 10,70);
 
   // Set Start Times
   blue1.SetSunriseTime(7, 00, 4);
   blue2.SetSunriseTime(7, 30, 4);
   blue3.SetSunriseTime(8, 00, 4);
-  white1.SetSunriseTime(8, 00, 4);
-  white2.SetSunriseTime(8, 30, 4);
+  white1.SetSunriseTime(8, 00, 5);
+  white2.SetSunriseTime(8, 00, 4);
 
-  blue1.SetSunsetTime(20, 00, 4);
-  blue2.SetSunsetTime(20, 30, 4);
+  blue1.SetSunsetTime(20, 30, 4);
+  blue2.SetSunsetTime(20, 45, 4);
   blue3.SetSunsetTime(21, 00, 4);
   white1.SetSunsetTime(20, 00, 4);
-  white2.SetSunsetTime(20, 30, 4);
+  white2.SetSunsetTime(20, 00, 5);
 
   //blue1.SetSunriseTime(7, 13, .1);
   //blue2.SetSunriseTime(7, 24, .1);

@@ -19,7 +19,6 @@ void TimeService_Yun::init()
 {
 	Bridge.begin();       //Start communication with draguino
 	Console.begin();      //Start Draguino console
-	while (!Console);
 	
 	//Check NTP Server
 	if (!date.running()) {
